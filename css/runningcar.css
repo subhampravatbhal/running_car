@@ -1,0 +1,138 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.container
+{
+    background-image: url(../img/sky.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.road
+{
+    background-image: url(../img/road.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    height: 200px;
+    width: 1200%;
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    animation: road 5s linear infinite;
+    
+}
+.city
+{
+    height: 250px;
+    width: 800%;
+    background-image: url(../img/city.png);
+    position:absolute;
+    display: block;
+    bottom: 200px;
+    background-repeat: repeat-x;
+    left: 0;
+    right: 0;
+    z-index: 1;
+   animation: road 19s linear infinite;
+}
+.car {
+  width: 400px;
+  left: 50%;
+  bottom: 70px;
+  position: absolute;
+  margin-top: 100px;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+.car img
+{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes road
+{
+    100%
+    {
+       transform: translateX(-3400px);
+    }
+}
+@keyframes car
+{
+  100%
+  {
+       transform: translateX(-1px);
+  }
+  50%
+  {
+      transform: translateX(1px);
+  }
+  0%
+  {
+      transform: translateX(-1px);
+  }
+}
+.wheel {
+    height: 80px;
+    left: 59%;
+    position: absolute;
+    bottom: 74px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.wheel img{
+    width: 80px;
+    height: 80px;
+}
+.back-wheel
+{
+left :-37px;
+position: absolute;
+animation: back-wheel 23ms linear infinite;
+}
+.front-wheel
+{
+    left:-282px;
+    position:absolute;
+    animation: front-wheel 23ms linear infinite;
+}
+@keyframes back-wheel
+{
+    100%
+    {
+        transform:rotate(360deg)
+    }
+}
+@keyframes front-wheel
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:500px) {
+    .back-wheel
+    {
+        left:29px;
+    }
+    .front-wheel
+    {
+        left:-216px ;
+    }
+}
+@media (max-width:900) {
+    .back-wheel
+    {
+        left:29px;
+    }
+    .front-wheel
+    {
+        left:-216px ;
+    }
+}
